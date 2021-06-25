@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG DETAIL</title>
+    <style>
+        body {text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>{{member.name}}</h3>
+        {{member.pub_date}}<br>
+        {{member.age}}<br>
+        {{member.email}}<br>
+        {{member.introduce}}<br>
+        <a href="{% url 'home' %}">홈으로 돌아가기</a><br>
+        <a href="{% url 'edit' member.id %}">Edit</a>
+        <a href="{% url 'delete' member.id %}">Delete</a>
+    </div>
+</body>
+</html>
