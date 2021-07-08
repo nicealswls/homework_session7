@@ -3,6 +3,11 @@ from .models import Signup
 from django.utils import timezone
 
 # Create your views here.
+
+def signup(request):
+    signup = Signup.objects
+    return render(request, 'home.html', {'signup': signup})
+
 def home(request):
     members = Signup.objects.all()
     return render(request, 'home.html', {'members':members})
